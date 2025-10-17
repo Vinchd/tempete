@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
         className={`${helvetica.className} ${helvetica.variable} antialiased h-dvh bg-primary text-secondary`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
