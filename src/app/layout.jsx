@@ -1,13 +1,40 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const helvetica = localFont({
+  variable: "--font-helvetica",
+  src: [
+    {
+      path: "./fonts/helvetica/Helvetica-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/helvetica/Helvetica-LightOblique.woff2",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "./fonts/helvetica/Helvetica.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/helvetica/Helvetica-Oblique.woff2",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./fonts/helvetica/Helvetica-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/helvetica/Helvetica-BoldOblique.woff2",
+      weight: "700",
+      style: "italic",
+    },
+  ],
   subsets: ["latin"],
 });
 
@@ -20,7 +47,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${helvetica.className} ${helvetica.variable} antialiased h-dvh bg-primary text-secondary`}
       >
         {children}
       </body>
