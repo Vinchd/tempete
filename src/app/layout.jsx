@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import localFont from "next/font/local";
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 
 const helvetica = localFont({
@@ -46,10 +47,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className="h-dvh">
       <body
         className={`${helvetica.className} ${helvetica.variable} antialiased h-dvh bg-primary text-secondary`}
       >
+        <NavBar />
         {children}
         <Analytics />
       </body>
