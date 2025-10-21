@@ -111,7 +111,7 @@ export default function NavBar() {
           </ul>
         </div>
         <p className="right-0 bottom-0 absolute opacity-80 mr-6 font-light text-[8px] text-secondary delay-700">
-          &copy; 2025 La Boule Rouge
+          &copy; 2025 Tempête
         </p>
       </div>
     </nav>

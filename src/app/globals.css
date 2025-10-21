@@ -2,7 +2,7 @@
 
 @theme inline {
   --color-primary: #ffffff; /*white*/
-  --color-secondary: #221e1f; /*black*/
+  --color-secondary: #231f20; /*black*/
   --color-tertiary: #c04c27; /*orange*/
   --font-helvetica: var(--font-helvetica);
 }
