@@ -2,7 +2,7 @@ import { FaInstagram } from "react-icons/fa";
 
 export default function page() {
   return (
-    <main className="flex flex-col justify-center items-center py-12 w-full min-h-full overflow-y-auto font-bold text-center uppercase tracking-tighter scrollbar-hide">
+    <main className="flex flex-col justify-center items-center py-12 w-full min-h-full overflow-y-auto font-bold text-center uppercase tracking-tighter cursor-default scrollbar-hide">
       <h1 className="mb-12 text-4xl">Horaires d'ouverture</h1>
       <p className="text-[22px]">Mardi au Samedi 19h-2h</p>
       <a
