@@ -7,7 +7,7 @@ export default function Home() {
       <FullScreenImageFader />
       <div className="z-20 absolute inset-0 bg-black/20" />
       <div className="z-30 absolute inset-0 flex flex-col justify-center items-center">
-        <div className="relative w-2/3 max-sm:w-full h-full">
+        <div className="relative w-2/3 max-sm:w-full h-full -translate-y-[3%]">
           <Image
             src="/logo_tempete.svg"
             alt="Logo Tempête"
