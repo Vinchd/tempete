@@ -33,10 +33,10 @@ export default function NavBar() {
         {/* Nav toggle */}
         <button
           type="button"
-          className={clsx("text-primary navToggle", {
+          className={clsx("navToggle", {
             active: navMenuIsOpen,
-            // "text-secondary": whiteBurger,
-            // "text-primary": !whiteBurger,
+            "text-primary": whiteBurger,
+            "text-secondary": !whiteBurger,
           })}
           onClick={toggleNav}
           aria-label="Toggle navigation"
