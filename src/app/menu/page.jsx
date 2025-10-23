@@ -1,4 +1,5 @@
 import Papa from "papaparse";
+import Image from "next/image";
 
 export const metadata = {
   title: "Menu - Tempête",
@@ -86,36 +87,52 @@ export default async function page() {
   return (
     <main className="relative flex flex-col pt-20 max-sm:pt-18 pb-12 h-full font-bold uppercase">
       <section className="overflow-y-auto cursor-default scrollbar-hide">
-        <div className="flex flex-col items-center mx-auto max-w-3xl">
-          <div className="mb-24">
-            <h1 className="mb-16 max-sm:text-[clamp(32px,6vw,38px)] text-5xl text-center">
+        <div className="flex flex-col items-center mx-auto">
+          <div className="">
+            {/* <h1 className="mb-16 max-sm:text-[clamp(32px,6vw,38px)] text-5xl text-center">
               Tempete
-            </h1>
-            {Object.entries(menuPrincipal).map(
-              ([category, items], idx, arr) => (
-                <div key={category} className="mx-6 mb-6">
-                  <ul className="flex flex-col items-center gap-6">
-                    {items.map((item) => (
-                      <li
-                        key={item.id}
-                        className="flex flex-col items-center my-1 w-full leading-[1.15]"
-                      >
-                        <div className="relative flex justify-center items-center w-full max-sm:text-[26px] text-center tracking-wide">
-                          <p className="w-xs text-balance leading-7">
-                            {item.nom}
-                          </p>
-                          <p className="right-0 absolute">{item.prix}</p>
-                        </div>
-                      </li>
-                    ))}
-
-                    {idx < arr.length - 1 && (
-                      <hr className="my-8 border-primary border-t w-30" />
-                    )}
-                  </ul>
-                </div>
-              ),
-            )}
+            </h1> */}
+            <div className="flex justify-center">
+              <Image
+                src="/logo_tempete.svg"
+                alt="Logo Tempête"
+                width={400}
+                height={150}
+                priority
+                className=""
+              />
+            </div>
+            {/* {Object.entries(menuPrincipal).map(([category, items]) => (
+              <div key={category} className="">
+                <ul className="flex flex-col items-end mb-16">
+                  {items.map((item) => (
+                    <li key={item.id} className="">
+                      <div className="flex gap-3 max-sm:bg-amber-900 max-md:bg-blue-500 max-sm:text-[clamp(10px,1vw,12px)] max-md:text-[clamp(12px,2vw,16px)] tracking-tighter">
+                        <p className="">{item.nom}</p>
+                        <p className="">{item.prix}€</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))} */}
+            {Object.entries(menuPrincipal).map(([category, items]) => (
+              <div key={category}>
+                <ul className="flex flex-col items-center mr-16 max-sm:mr-0 mb-16 max-sm:mb-6 text-[15px]">
+                  {items.map((item) => (
+                    <li
+                      key={item.id}
+                      className="flex justify-center w-full max-sm:text-[clamp(8px,2vw,13px)] max-md:text-[clamp(13px,2vw,15px)]"
+                    >
+                      <div className="flex gap-4 w-full max-w-full whitespace-nowrap">
+                        <p className="flex-1 text-right">{item.nom}</p>
+                        <p className="w-[60px] text-left">{item.prix}€</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
