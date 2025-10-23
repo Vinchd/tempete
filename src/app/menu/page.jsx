@@ -88,10 +88,7 @@ export default async function page() {
     <main className="relative flex flex-col pt-20 max-sm:pt-18 pb-12 h-full font-bold uppercase">
       <section className="overflow-y-auto cursor-default scrollbar-hide">
         <div className="flex flex-col items-center mx-auto">
-          <div className="">
-            {/* <h1 className="mb-16 max-sm:text-[clamp(32px,6vw,38px)] text-5xl text-center">
-              Tempete
-            </h1> */}
+          <div>
             <div className="flex justify-center">
               <Image
                 src="/logo_tempete.svg"
@@ -99,23 +96,8 @@ export default async function page() {
                 width={400}
                 height={150}
                 priority
-                className=""
               />
             </div>
-            {/* {Object.entries(menuPrincipal).map(([category, items]) => (
-              <div key={category} className="">
-                <ul className="flex flex-col items-end mb-16">
-                  {items.map((item) => (
-                    <li key={item.id} className="">
-                      <div className="flex gap-3 max-sm:bg-amber-900 max-md:bg-blue-500 max-sm:text-[clamp(10px,1vw,12px)] max-md:text-[clamp(12px,2vw,16px)] tracking-tighter">
-                        <p className="">{item.nom}</p>
-                        <p className="">{item.prix}€</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))} */}
             {Object.entries(menuPrincipal).map(([category, items]) => (
               <div key={category}>
                 <ul className="flex flex-col items-center mr-16 max-sm:mr-0 mb-16 max-sm:mb-6 text-[15px]">
