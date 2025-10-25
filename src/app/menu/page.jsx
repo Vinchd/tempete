@@ -1,5 +1,5 @@
-import Papa from "papaparse";
 import Image from "next/image";
+import Papa from "papaparse";
 
 export const metadata = {
   title: "Menu - Tempête",
@@ -106,7 +106,7 @@ export default async function page() {
                       key={item.id}
                       className="flex justify-center w-full max-sm:text-[clamp(8px,2vw,13px)] max-md:text-[clamp(13px,2vw,15px)]"
                     >
-                      <div className="flex gap-4 w-full max-w-full whitespace-nowrap">
+                      <div className="flex gap-3 w-full max-w-full whitespace-nowrap">
                         <p className="flex-1 text-right">{item.nom}</p>
                         <p className="w-[60px] text-left">{item.prix}€</p>
                       </div>
