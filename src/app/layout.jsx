@@ -68,7 +68,7 @@ export const metadata = {
     siteName: "Tempête",
     images: [
       {
-        url: "/logo_tempete.jpg",
+        url: "/logo_tempete.svg",
         width: 150,
         height: 150,
         alt: "Logo Tempête",
@@ -81,7 +81,7 @@ export const metadata = {
       title: "Tempête",
       description:
         "Du Mardi au Samedi, de 19h jusqu’à 2h. 5 cour des Petites Écuries Paris 10. Fusion food & natural wine.",
-      images: ["/logo_tempete.jpg"],
+      images: ["/logo_tempete.svg"],
     },
   },
   robots: {
