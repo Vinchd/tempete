@@ -4,22 +4,6 @@ import Papa from "papaparse";
 export const metadata = {
   title: "Menu - Tempête",
   description: "Découvrez le menu de Tempête.",
-  openGraph: {
-    title: "Menu - Tempête",
-    description: "Parcourez le menu de Tempête.",
-    url: `${new URL(process.env.NEXT_PUBLIC_SITE_URL)}/menu`,
-    siteName: "Tempête",
-    images: [
-      {
-        url: "/logo_tempete.svg",
-        width: 267,
-        height: 200,
-        alt: "Logo Tempête",
-      },
-    ],
-    locale: "fr_FR",
-    type: "website",
-  },
 };
 
 async function getMenu() {

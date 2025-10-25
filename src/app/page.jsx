@@ -2,6 +2,31 @@ import Image from "next/image";
 import FullScreenImageFader from "@/components/FullScreenImageFader";
 
 export default function Home() {
+  const jsonLD = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: "Tempête",
+    image: "https://tempeteparis.fr/logo_tempete.jpg",
+    "@id": "https://tempeteparis.fr",
+    url: "https://tempeteparis.fr",
+    telephone: "+33 9 70 66 74 96",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "5 Cour des Petites Écuries",
+      addressLocality: "Paris",
+      postalCode: "75010",
+      addressCountry: "FR",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 48.87239,
+      longitude: 2.35317,
+    },
+    servesCuisine: ["Française", "Fusion"],
+    priceRange: "€€",
+    openingHours: ["Tu-Sa 19:00-02:00"],
+  };
+
   return (
     <main className="relative h-full overflow-hidden">
       <FullScreenImageFader />
@@ -17,6 +42,10 @@ export default function Home() {
           />
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
+      />
     </main>
   );
 }
