@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Papa from "papaparse";
+import LogoTempete from "@/components/LogoTempete";
 
 export const metadata = {
   title: "Menu - Tempête",
@@ -74,13 +74,7 @@ export default async function page() {
         <div className="flex flex-col items-center mx-auto">
           <div>
             <div className="flex justify-center">
-              <Image
-                src="/logo_tempete.svg"
-                alt="Logo Tempête"
-                width={400}
-                height={150}
-                priority
-              />
+              <LogoTempete className="text-secondary" width={400} />
             </div>
             {Object.entries(menuPrincipal).map(([category, items]) => (
               <div key={category}>

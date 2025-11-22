@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LogoTempete from "@/components/LogoTempete";
 
 export default function Home() {
   const jsonLD = {
@@ -36,16 +37,10 @@ export default function Home() {
         priority
         className="top-0 left-0 absolute w-full h-full object-cover"
       />
-      <div className="z-20 absolute inset-0 bg-black/20" />
+      <div className="z-20 absolute inset-0 bg-black/10" />
       <div className="z-30 absolute inset-0 flex flex-col justify-center items-center">
-        <div className="relative w-2/3 max-sm:w-full h-full -translate-y-[3%]">
-          <Image
-            src="/logo_tempete.svg"
-            alt="Logo Tempête"
-            fill
-            priority
-            className="object-contain"
-          />
+        <div className="relative flex w-1/2 max-sm:w-full h-full -translate-y-[3%]">
+          <LogoTempete className="text-primary" />
         </div>
       </div>
       <script
