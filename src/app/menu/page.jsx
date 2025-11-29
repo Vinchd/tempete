@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Papa from "papaparse";
+import LogoTempete from "@/components/LogoTempete";
 
 export const metadata = {
   title: "Menu - Tempête",
@@ -73,26 +73,23 @@ export default async function page() {
       <section className="overflow-y-auto cursor-default scrollbar-hide">
         <div className="flex flex-col items-center mx-auto">
           <div>
-            <div className="flex justify-center">
-              <Image
-                src="/logo_tempete.svg"
-                alt="Logo Tempête"
-                width={400}
-                height={150}
-                priority
-              />
+            <div className="flex justify-end">
+         <div className="relative mb-12 w-[200px] max-sm:w-[150px] h-[200px] max-sm:h-[150px] overflow-visible">
+  <LogoTempete className="top-0 right-46 max-sm:right-24 absolute w-full h-full text-secondary -rotate-90 origin-top-right" />
+</div>
+
             </div>
             {Object.entries(menuPrincipal).map(([category, items]) => (
               <div key={category}>
-                <ul className="flex flex-col items-center mr-16 max-sm:mr-0 mb-16 max-sm:mb-6 text-[15px]">
+                <ul className="flex flex-col items-center mr-16 max-sm:mr-0 mb-10 max-sm:mb-6">
                   {items.map((item) => (
                     <li
                       key={item.id}
-                      className="flex justify-center w-full max-sm:text-[clamp(8px,2vw,13px)] max-md:text-[clamp(13px,2vw,15px)]"
+                      className="flex justify-center w-full text-[clamp(13px,2vw,15px)] max-sm:text-[clamp(8px,2.2vw,13px)] leading-5 max-sm:leading-3 tracking-tight"
                     >
                       <div className="flex gap-3 w-full max-w-full whitespace-nowrap">
                         <p className="flex-1 text-right">{item.nom}</p>
-                        <p className="w-[60px] text-left">{item.prix}€</p>
+                        <p className="text-left">{item.prix}€</p>
                       </div>
                     </li>
                   ))}

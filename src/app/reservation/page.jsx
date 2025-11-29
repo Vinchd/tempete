@@ -32,7 +32,7 @@ export default function ReservationPage() {
               src="https://bookings.zenchef.com/results?rid=360820&pid=1001&fullscreen=true"
               title="Réservation Zenchef"
               loading="lazy"
-              className={`${isLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-700 w-full p-4 max-sm:h-[600px] h-[550px]`}
+              className={`${isLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-700 w-full p-4 max-sm:h-[600px] h-[570px]`}
             />
           </div>
         </div>
