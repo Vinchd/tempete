@@ -39,7 +39,7 @@ export default function Home() {
       />
       <div className="z-20 absolute inset-0 bg-black/10" />
       <div className="z-30 absolute inset-0 flex flex-col justify-center items-center">
-        <div className="relative flex w-1/2 max-sm:w-full h-full -translate-y-[3%]">
+        <div className="relative flex w-1/3 max-sm:w-3/4 h-full -translate-y-[3%]">
           <LogoTempete className="text-primary" />
         </div>
       </div>

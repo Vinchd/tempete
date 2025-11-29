@@ -1,7 +1,7 @@
 export default function LogoTempete({ className = "", style = {}, ...props }) {
   return (
     <svg
-      viewBox="0 0 3023.6267 1511.8134"
+      viewBox="250 400 2400 700"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       style={style}
@@ -123,7 +123,6 @@ export default function LogoTempete({ className = "", style = {}, ...props }) {
           clipPath="url(#clipPath16)"
           transform="matrix(1.3333333,0,0,-1.3333333,2039.544,674.9752)"
         />
-        {/* ... laisse les autres paths exactement comme dans ton fichier (déjà avec fill="currentColor") */}
       </g>
     </svg>
   );
