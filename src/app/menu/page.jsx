@@ -71,22 +71,18 @@ export default async function page() {
   return (
     <main className="relative flex flex-col pt-20 max-sm:pt-18 pb-12 h-full font-bold uppercase">
       <section className="overflow-y-auto cursor-default scrollbar-hide">
-        <div className="flex flex-col items-center mx-auto">
+        <div className="flex flex-col items-center mx-auto text-[clamp(13px,2vw,15px)] max-sm:text-[clamp(8px,2.2vw,13px)] leading-4.5 max-sm:leading-3 tracking-tight">
           <div>
             <div className="flex justify-end">
-         <div className="relative mb-12 w-[200px] max-sm:w-[150px] h-[200px] max-sm:h-[150px] overflow-visible">
-  <LogoTempete className="top-0 right-46 max-sm:right-24 absolute w-full h-full text-secondary -rotate-90 origin-top-right" />
-</div>
-
+              <div className="relative mb-12 w-[200px] max-sm:w-[150px] h-[200px] max-sm:h-[150px] overflow-visible">
+                <LogoTempete className="top-0 right-46 max-sm:right-24 absolute w-full h-full text-secondary -rotate-90 origin-top-right" />
+              </div>
             </div>
             {Object.entries(menuPrincipal).map(([category, items]) => (
               <div key={category}>
-                <ul className="flex flex-col items-center mr-16 max-sm:mr-0 mb-10 max-sm:mb-6">
+                <ul className="flex flex-col items-center mr-16 max-sm:mr-0 mb-8 max-sm:mb-6">
                   {items.map((item) => (
-                    <li
-                      key={item.id}
-                      className="flex justify-center w-full text-[clamp(13px,2vw,15px)] max-sm:text-[clamp(8px,2.2vw,13px)] leading-5 max-sm:leading-3 tracking-tight"
-                    >
+                    <li key={item.id} className="flex justify-center w-full">
                       <div className="flex gap-3 w-full max-w-full whitespace-nowrap">
                         <p className="flex-1 text-right">{item.nom}</p>
                         <p className="text-left">{item.prix}€</p>
@@ -96,6 +92,9 @@ export default async function page() {
                 </ul>
               </div>
             ))}
+            <div className="pr-16 max-sm:pr-0 w-full max-w-full text-right whitespace-nowrap">
+              {"Vins Vivants // Cocktails // Cuisine Freestyle"}
+            </div>
           </div>
         </div>
       </section>
