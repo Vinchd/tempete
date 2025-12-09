@@ -69,7 +69,7 @@ export default async function page() {
   };
 
   return (
-    <main className="relative flex flex-col pt-20 max-sm:pt-18 pb-12 h-full font-bold uppercase">
+    <main className="relative flex flex-col pt-18 max-sm:pt-18 pb-8 h-full font-bold uppercase">
       <section className="overflow-y-auto cursor-default scrollbar-hide">
         <div className="flex flex-col items-center mx-auto text-[clamp(13px,2vw,15px)] max-sm:text-[clamp(8px,2.2vw,13px)] leading-4.5 max-sm:leading-3 tracking-tight">
           <div>
