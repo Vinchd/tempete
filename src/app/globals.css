@@ -218,3 +218,7 @@
 .navIsVisible .navMenu li:nth-child(4) {
   transition-delay: 0.6s;
 }
+
+.navIsVisible .navMenu li:nth-child(5) {
+  transition-delay: 0.7s;
+}
