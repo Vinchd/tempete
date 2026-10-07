@@ -13,10 +13,22 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: "https://www.tempeteparis.fr/reservation",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://www.tempeteparis.fr/informations",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: "https://www.tempeteparis.fr/privatisation",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ];
 }

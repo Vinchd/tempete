@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function ReservationPage() {
@@ -19,6 +20,12 @@ export default function ReservationPage() {
           <h1 className="mx-12 mb-12 max-sm:mb-6 text-4xl text-center uppercase">
             Réserver une table
           </h1>
+          <div className="px-4 text-sm text-center">
+            Pour toute demande de 10 personnes et plus,{" "}
+            <Link href="/privatisation" className="hover:text-tertiary">
+              merci de nous contacter <span className="underline">ici</span>
+            </Link>
+          </div>
           <div className="relative shadow-md rounded-2xl overflow-hidden">
             {!isLoaded && (
               <div className="absolute inset-0 flex flex-col justify-center items-center animate-pulse">
